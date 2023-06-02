@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* WEBKIT CSS The main difference between WebKit CSS and regular CSS is that WebKit CSS properties are designed to work only in WebKit-based browsers, while regular CSS properties work across all modern web browsers. However, because Safari and Chrome are popular browsers, WebKit CSS properties are widely used in modern web development to add unique visual effects and improve the user experience */
+
+::-webkit-scrollbar {
+  width: 6px!important;
+  height: 6px!important;
+}
+/* jisko hum pakad kar scrooll karte hai */
+::-webkit-scrollbar-thumb {
+  background-color: rgba(210, 17, 17, 0.2);
+}
+/* jiske upar humara scrollbar chalta hai */
+::-webkit-scrollbar-track {    
+  background: hsla(0, 11%, 72%, 0.1);
+}
