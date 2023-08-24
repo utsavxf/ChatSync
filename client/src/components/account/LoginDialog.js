@@ -13,10 +13,13 @@ import { addUser } from '../../service/api';
 //overrriding css
 const Component = styled(Box)`
     display: flex; 
+    
+    
 `;
 
 const Container = styled(Box)`
     padding: 56px 0 56px 56px;
+    
 `;
 
 //img is not a material ui component that's why it's syntax is a litlle different
@@ -53,7 +56,9 @@ const dialogStyle = {
     maxHeight: '100%',
     borderRadius: 0,
     boxShadow: 'none',
-    overflow: 'hidden'
+    overflow: 'hidden',
+    
+    
 }
 
 
@@ -95,10 +100,10 @@ const LoginDialog = () => {
             
             <Component>
                 <Container>
-                    <Title>To use WhatsApp on your computer:</Title>
+                    <Title>To use Chatify on your computer:</Title>
                     <StyledList>
-                        <ListItem>1. Open WhatsApp on your phone</ListItem>
-                        <ListItem>2. Tap Menu Settings and select WhatsApp Web</ListItem>
+                        <ListItem>1. Open Chatify on your phone</ListItem>
+                        <ListItem>2. Tap Menu Settings and select Chatify Web</ListItem>
                         <ListItem>3. Point your phone to this screen to capture the code</ListItem>
                     </StyledList>
                 </Container>
