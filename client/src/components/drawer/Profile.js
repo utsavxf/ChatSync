@@ -58,11 +58,11 @@ const Profile = () => {
                 <Typography>{account.name}</Typography>
             </BoxWrapper>
             <DescriptionContainer>
-                <Typography>This is not your username or pin. This name will be visible to your WhatsApp contacts.</Typography>
+                <Typography>This is not your username or pin. This name will be visible to your ChatSync contacts.</Typography>
             </DescriptionContainer>
             <BoxWrapper>
                 <Typography>About</Typography>
-                <Typography>and the things you can't remember tell the things you can't forget</Typography>
+                <Typography>Write your bio</Typography>
             </BoxWrapper>
         </>
     </div>

@@ -116,7 +116,7 @@ router.post('/message/add',async(req,res)=>{
 
          const newMessage=new message(req.body);
          await newMessage.save();
-         await conversation.findByIdAndUpdate(req.body.conversationId,{message:req.body.text})
+         await conversation.findByIdAndUpdate(req.body.conversationId,{message:req.body.text})  //latest message has been updated
 
 
          return res.status(200).json("Message has been sent successfully");
@@ -137,7 +137,7 @@ router.get('/message/get/:id',async(req,res)=>{
  return res.status(200).json(allMessages)
 
   } catch (error) {
-    console.log('mai hu madarchod');
+    console.log('I am mad');
     
      return res.status(500).json(error.message)
   }

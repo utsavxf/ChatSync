@@ -10,7 +10,7 @@ import ChatDialog from './chat/ChatDialog';
 
 //overriding the material ui css for appbar component
 const LoginHeader = styled(AppBar)`    
-background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+background-image: linear-gradient( 109.6deg, rgba(156,252,248,1) 11.2%, rgba(110,123,251,1) 91.1% );
   height: 220px;
   box-shadow: none;
 `;
@@ -24,7 +24,7 @@ const Header = styled(AppBar)`
 
 const Component = styled(Box)`
 height: 100vh;
-background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+background-image: linear-gradient( 109.6deg, rgba(156,252,248,1) 11.2%, rgba(110,123,251,1) 91.1% );
 `;
 
 

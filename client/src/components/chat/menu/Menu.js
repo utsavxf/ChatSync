@@ -1,8 +1,10 @@
-import { Box } from '@mui/material'
+import { Box,styled } from '@mui/material'
 import React, { useState } from 'react'
 import Header from './Header'
 import Search from './Search'
 import Conversations from './Conversations'
+
+
 
 const Menu = () => {
 

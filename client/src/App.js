@@ -2,6 +2,7 @@ import { GoogleOAuthProvider } from '@react-oauth/google';
 import './App.css';
 import Messenger from './components/Messenger';
 import AccountProvider from './context/AccountProvider';
+// import Landing from './Landing/Landing';
 
 function App() {
 
@@ -13,7 +14,7 @@ function App() {
     <div className="App">
       < GoogleOAuthProvider clientId={clientId}>
         <AccountProvider>
-          <Messenger />    {/*account provider ke andar messenger humne as a children pass kara diya */}
+          <Messenger />    {/* account provider ke andar messenger humne as a children pass kara diya */}
         </AccountProvider>
       </GoogleOAuthProvider>
     </div>

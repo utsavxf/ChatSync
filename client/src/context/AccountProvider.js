@@ -8,7 +8,7 @@ export const AccountContext =  createContext(null); //ye ek initial value leta h
 
 const AccountProvider=({children})=>{   //children likhna is important else the data will not be available to messenger's children and you will see a blank screen
 
-
+      //we are managing basically 4 states in account provider
       const[account,setAccount]=useState();
       const[person,setPerson]=useState({});  
       const [activeUsers,setActiveUsers]=useState([]);

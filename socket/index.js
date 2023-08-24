@@ -33,8 +33,17 @@ io.on('connection',  (socket) => {
     //send message
     socket.on('sendMessage', (data) => {
         const user = getUser(data.receiverId);
-        io.to(user.socketId).emit('getMessage', data)
-    })
+        if (user) {
+            io.to(user.socketId).emit('getMessage', data);
+        } else {
+            console.log(`User with ID ${data.receiverId} not found.`);
+        }
+    });
+   
+    
+    
+    
+    
 
     //disconnect
     socket.on('disconnect', () => {
