@@ -7,11 +7,14 @@ import { getMessages, newMessage } from '../../../service/api';
 import Message from './Message';
 import { Socket } from 'socket.io-client';
 
-
+ 
 //CSS
 const Wrapper = styled(Box)`
-    background-image: url(${'https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png'});
-    background-size: 50%;
+//  background-image: url('https://images.pexels.com/photos/268415/pexels-photo-268415.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+//  background-image: url('https://media.istockphoto.com/id/1341437653/photo/abstract-composition-with-connecting-dots-and-lines-futuristic-network-background-for.webp?b=1&s=170667a&w=0&k=20&c=dvHp0Kmr1AnjtiVHSe_fSRCzwUThDPx_SlW_n1UUiPg=');
+background-size: cover;
+background-repeat: no-repeat;
+// background-size: 50%;
 `;
 
 const StyledFooter = styled(Box)`
@@ -25,6 +28,7 @@ const StyledFooter = styled(Box)`
 const Component = styled(Box)`
     height: 80vh;
     overflow-y: scroll;
+    background-color:blue
 `;
 
 const Container = styled(Box)`
@@ -46,7 +50,7 @@ const Messages = ({person,conversation}) => {
 
     const scrollRef=useRef();
 
-    const {account,socket,newMessageFlag,setNewMessageFlag}=useContext(AccountContext)
+    const {account,socket,newMessageFlag,setNewMessageFlag,theme}=useContext(AccountContext)
 
 
     useEffect(() => {
@@ -143,7 +147,7 @@ const Messages = ({person,conversation}) => {
 
   return (
     <Wrapper>
-            <Component>
+            <Component className='mess' id={theme}>
                 {
                     messages && messages.map(message => (
                         <Container ref={scrollRef}>

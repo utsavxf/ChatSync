@@ -13,6 +13,7 @@ const AccountProvider=({children})=>{   //children likhna is important else the 
       const[person,setPerson]=useState({});  
       const [activeUsers,setActiveUsers]=useState([]);
       const [newMessageFlag,setNewMessageFlag]=useState([]);
+      const [theme,setTheme]=useState("light")
 
       const socket=useRef(); 
 
@@ -29,6 +30,8 @@ const AccountProvider=({children})=>{   //children likhna is important else the 
         person,
         setPerson,
         socket,
+        setTheme,
+        theme,
         activeUsers,
         setActiveUsers,
         newMessageFlag,

@@ -5,10 +5,12 @@ import { Search, MoreVert } from '@mui/icons-material';
 
 import { AccountContext } from '../../../context/AccountProvider';
 import { defaultProfilePicture } from '../../../images/data'
+// import { SunIcon } from './Icons';
+import './Chat.css'
 
 const Header = styled(Box)`
     height: 44px;
-    background: #ededed;
+    background: #dad6d8;
     display: flex;
     padding: 8px 16px;
     align-items: center;
@@ -44,19 +46,19 @@ const ChatHeader = ({person}) => {
 
     // const url = person.picture || defaultProfilePicture;
     
-    const { activeUsers } = useContext(AccountContext);
+    const { activeUsers,theme } = useContext(AccountContext);
     console.log(activeUsers);
     
     return (
-        <Header>
+        <Header className='chatheader' id={theme}>
             <Image src={person.picture} alt="display picture" />     
             <Box>
-                <Name>{person.name}</Name>
-                <Status>{activeUsers?.find(user=>user.sub===person.sub) ? "Online" : "Offline"}</Status>    
+                <Name style={{color: theme === 'light' ? 'black' : 'white'}}>{person.name}</Name>
+                <Status style={{color: theme === 'light' ? 'black' : 'white'}} >{activeUsers?.find(user=>user.sub===person.sub) ? "Online" : "Offline"}</Status>    
             </Box>   
             <RightContainer>
-                <Search />
-                <MoreVert />    
+                <Search style={{color: theme === 'light' ? 'black' : 'white'}} />
+                <MoreVert style={{color: theme === 'light' ? 'black' : 'white'}} />    
             </RightContainer> 
         </Header>
     )

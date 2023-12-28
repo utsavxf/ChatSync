@@ -1,0 +1,13 @@
+#dark.maincomponent{
+    /* background-color: black; */
+    background-image: url("https://media.istockphoto.com/id/175413535/photo/black-paper-texture-background-with-spotlight.webp?b=1&s=170667a&w=0&k=20&c=-UlMGMQ4wI2QPvsq8yfEDykg7lezhjxlpU7qZpDuZ4M=");
+}
+
+#light.maincomponent{
+    /* background-image: linear-gradient( 109.6deg, rgba(156,252,248,1) 11.2%, rgba(110,123,251,1) 91.1% ); */
+    background-color: #ededed;
+}
+
+#light.lh{
+    background-image: url("https://media.istockphoto.com/id/175413535/photo/black-paper-texture-background-with-spotlight.webp?b=1&s=170667a&w=0&k=20&c=-UlMGMQ4wI2QPvsq8yfEDykg7lezhjxlpU7qZpDuZ4M=");
+}

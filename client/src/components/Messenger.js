@@ -4,19 +4,20 @@ import { AppBar, Toolbar, styled, Box } from '@mui/material'
 
 import { AccountContext } from '../context/AccountProvider';
 import ChatDialog from './chat/ChatDialog';
+import './Messenger.css'
 
 
 
 
 //overriding the material ui css for appbar component
 const LoginHeader = styled(AppBar)`    
-background-image: linear-gradient( 109.6deg, rgba(156,252,248,1) 11.2%, rgba(110,123,251,1) 91.1% );
+background-color: #ededed;
   height: 220px;
   box-shadow: none;
 `;
 
 const Header = styled(AppBar)`    
-  background-color: #00A884;
+  background-color: #ededed;
   height: 125px;
   box-shadow: none;
 `;
@@ -24,7 +25,6 @@ const Header = styled(AppBar)`
 
 const Component = styled(Box)`
 height: 100vh;
-background-image: linear-gradient( 109.6deg, rgba(156,252,248,1) 11.2%, rgba(110,123,251,1) 91.1% );
 `;
 
 
@@ -32,13 +32,13 @@ background-image: linear-gradient( 109.6deg, rgba(156,252,248,1) 11.2%, rgba(110
 const Messenger = () => {
 
 
-  const { account } = useContext(AccountContext)
+  const { account,theme,setTheme } = useContext(AccountContext)
 
 
 
   return (
     <>
-      <Component>
+      <Component className='maincomponent' id={theme} >
         {
           account ?
             <>
@@ -49,7 +49,7 @@ const Messenger = () => {
               <div>hat chutiye</div> */}
             </> :
             <>
-              <LoginHeader>
+              <LoginHeader className='lh' id='theme'>
                 <Toolbar></Toolbar>
               </LoginHeader>
               <LoginDialog />

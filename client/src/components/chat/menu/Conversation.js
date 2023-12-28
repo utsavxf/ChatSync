@@ -40,7 +40,7 @@ const Text = styled(Typography)`
 
 const Conversation = ({user}) => {
 
-  const {setPerson,account,newMessageFlag}=useContext(AccountContext)
+  const {setPerson,account,newMessageFlag,theme}=useContext(AccountContext)
   const [message,setMessage]=useState({})
 
   
@@ -70,14 +70,14 @@ const Conversation = ({user}) => {
     </Box>
     <Box style={{width: '100%'}}>
         <Container>
-            <Typography>{user.name}</Typography>
+            <Typography style={{ color: theme === 'light' ? 'black' : 'white' }}>{user.name}</Typography>
             { 
                 message?.text && 
-                <Timestamp>{formatDate(message?.timestamp)}</Timestamp>        
+                <Timestamp style={{ color: theme === 'light' ? 'black' : 'white' }}>{formatDate(message?.timestamp)}</Timestamp>        
             }
         </Container>
         <Box>
-            <Text>{message?.text?.includes('localhost') ? 'media' : message.text}</Text>
+            <Text style={{ color: theme === 'light' ? 'black' : 'white' }}>{message?.text?.includes('localhost') ? 'media' : message.text}</Text>
         </Box>
     </Box>
 </Component>

@@ -1,0 +1,19 @@
+#dark.hd{
+    background-color: #403f3f;
+    border-right: 1px solid #cdc5c5;
+}
+
+#light.hd{
+    background: #dad6d8;
+    border-right: 1px solid #cdc5c5;
+}
+
+
+#dark.ctc{
+    background-color: #403f3f;
+}
+
+#light.ctc{
+    background-color: #f3f4ec73;
+}
+

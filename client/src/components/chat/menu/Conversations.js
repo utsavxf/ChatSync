@@ -10,11 +10,12 @@ import Conversation from './Conversation';
 const Component = styled(Box)` 
     overflow: overlay;
     height: 81vh;
+    backgroundColor: #f3f4ec73;
 `;
 
 const StyledDivider = styled(Divider)`
     margin: 0 0 0 70px;
-    background-color: #e9edef;
+    background-color: #d2e095;
     opacity: .6;
 `;
 
@@ -24,7 +25,7 @@ const Conversations = ({text}) => {
 
       const [users,setUsers]=useState([]);
 
-      const {account,socket,setActiveUsers}=useContext(AccountContext)
+      const {account,theme,socket,setActiveUsers}=useContext(AccountContext)
 
 
     //component ke call hote hi hume data ko get karna hai
@@ -53,7 +54,7 @@ const Conversations = ({text}) => {
 
 
   return (
-    <Component>
+    <Component  id={theme} className='ctc'>
       {
       users.map(user => (
         user.sub!==account.sub &&  ///jo user login hai,usi ki details thodi dikhani hai

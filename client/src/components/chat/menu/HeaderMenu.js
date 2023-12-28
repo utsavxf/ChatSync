@@ -1,8 +1,9 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 
 
 import { MoreVert } from '@mui/icons-material';
 import { Menu, MenuItem, styled } from '@mui/material';
+import { AccountContext } from '../../../context/AccountProvider';
 
 //css
 const MenuOption = styled(MenuItem)`
@@ -19,7 +20,8 @@ const MenuOption = styled(MenuItem)`
 
 
 const HeaderMenu = ({setOpenDrawer}) => {
-
+  
+    const { theme, setTheme } = useContext(AccountContext)
 
     const [open,setOpen]=useState(null);
 
@@ -35,7 +37,7 @@ const HeaderMenu = ({setOpenDrawer}) => {
 
     return (
         <>
-            <MoreVert style={{cursor:"pointer"}} onClick={handleClick}  />
+            <MoreVert style={{cursor:"pointer",color: theme === 'light' ? 'black' : 'white' }}  onClick={handleClick}  />
             <Menu
                 anchorEl={open}
                 keepMounted //taki humara menu iske just neeche khule varna kahi bhi khul jaaega
