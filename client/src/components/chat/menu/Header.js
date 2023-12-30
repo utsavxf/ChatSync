@@ -90,7 +90,7 @@ const Header = () => {
                 {/* ye picture us decoded object se hi aa rahi hai(account),google provide karta hai */}
                 <Image src={account.picture} alt="dp" onClick={() => toggleDrawer()} />
                 <Wrapper>
-                    <AddIcon onClick={() => setGrp(!grp)} style={{ color: theme === 'light' ? 'black' : 'white', position: 'relative', left: '27px', cursor: "pointer" }} />
+                    <AddIcon style={{ color: theme === 'light' ? 'black' : 'white', position: 'relative', left: '27px', cursor: "pointer" }} />
                     <button onClick={() => { theme === "light" ? setTheme("dark") : setTheme("light") }} style={{ fontSize: '1px', border: 'none', position: 'relative', top: '-7px', left: '10px', cursor: "pointer", background: "none" }}>
                         {
                             theme === 'dark' ?
