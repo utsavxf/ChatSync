@@ -2,6 +2,9 @@
 import { Box, styled, Typography, Divider } from '@mui/material';
 
 import { emptyChatImage } from '../../../images/data';
+import { useContext } from 'react';
+import { AccountContext } from '../../../context/AccountProvider';
+import "./Chat.css"
 
 const Component = styled(Box)`
     background: #f8f9fa;
@@ -40,14 +43,15 @@ const StyledDivider = styled(Divider)`
 `;
 
 const EmptyChat = () => {
+    const {theme,setTheme}=useContext(AccountContext)
     
     return (
-        <Component>
+        <Component className='emptychat' id={theme}>
             <Container>
-                <Image src={emptyChatImage} alt="empty" />
-                <Title>ChatSync Web</Title>
-                <SubTitle>Now send and receive messages without keeping your phone online.</SubTitle>
-                <SubTitle>Use ChatSync on up to 4 linked devices and 1 phone at the same time. </SubTitle>
+                <Image  src={emptyChatImage} alt="empty" />
+                <Title style={{ color: theme === 'light' ? 'black' : 'white' }}>ChatSync Web</Title>
+                <SubTitle style={{ color: theme === 'light' ? 'black' : 'white' }}>Now send and receive messages without keeping your phone online.</SubTitle>
+                <SubTitle style={{ color: theme === 'light' ? 'black' : 'white' }}>Use ChatSync on up to 4 linked devices and 1 phone at the same time. </SubTitle>
                 <StyledDivider />
             </Container>
         </Component>

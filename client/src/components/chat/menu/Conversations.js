@@ -18,7 +18,7 @@ const StyledDivider = styled(Divider)`
     background-color: #d2e095;
     opacity: .6;
 `;
-
+ 
 
 const Conversations = ({text}) => {
 
@@ -32,14 +32,14 @@ const Conversations = ({text}) => {
     useEffect(()=>{
          const fetchData=async ()=>{
              let data=await getUsers();
-             console.log(data);
+            //  console.log(data);
              
              const filteredData=data.filter(user=>user.name.toLowerCase().includes(text.toLowerCase()))
              setUsers(filteredData)
 
              
          }
-         fetchData();
+         fetchData(); 
     },[text])
  
 

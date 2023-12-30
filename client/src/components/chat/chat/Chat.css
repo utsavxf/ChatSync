@@ -3,9 +3,35 @@
 }
 
 #dark.mess{
-    background-color: #0d0d28;
+    background: #285648eb;
+    
+    
 }
 
 #light.mess{
     background-color: #c6d5d3;
+}
+
+#light.searchf{
+    background-color:  #e9e1e1;
+}
+#dark.searchf{
+  background-color: #403f3f;
+}
+#light.emptychat{
+    background-color:  #e9e1e1;
+}
+#dark.emptychat{
+  background-color: #285648eb;
+}
+#light.dusra{
+    background-color: #dedbd7;
+}
+#dark.dusra{
+  background-color: #537692;
+  color: white;
+}
+
+.emoji{
+    
 }

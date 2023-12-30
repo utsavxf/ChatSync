@@ -1,6 +1,6 @@
 #dark.hd{
     background-color: #403f3f;
-    border-right: 1px solid #cdc5c5;
+    /* border-right: 1px solid #cdc5c5; */
 }
 
 #light.hd{
@@ -15,5 +15,23 @@
 
 #light.ctc{
     background-color: #f3f4ec73;
+}
+
+#dark.menu{
+    background-color: #403f3f;
+    border: 1px solid black;
+}
+
+#light.menu{
+    background-color: #f3f4ec73;
+}
+
+#dark.top{
+    background-color: #4d4a4a;
+   
+}
+
+#light.top{
+    background-color:  #fff;
 }
 

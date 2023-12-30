@@ -8,10 +8,11 @@ import { AccountContext } from '../../../context/AccountProvider';
 
 import { downloadMedia, formatDate } from '../../../utils/common_utils';
 import { iconPDF } from '../../../images/data';
+import "./Chat.css"
 
 //recieved message
 const Wrapper = styled(Box)`
-    background: #FFFFFF;
+    background: #dedbd7;
     padding: 5px;
     max-width: 60%;
     width: fit-content;
@@ -22,7 +23,7 @@ const Wrapper = styled(Box)`
 
 //our own message
 const Own = styled(Box)`
-background-image: linear-gradient( 95.2deg, rgba(173,252,234,1) 26.8%, rgba(192,229,246,1) 64% );
+// background-image: linear-gradient( 95.2deg, rgba(173,252,234,1) 26.8%, rgba(192,229,246,1) 64% );
     padding: 5px;
     max-width: 60%;
     width: fit-content;
@@ -30,6 +31,7 @@ background-image: linear-gradient( 95.2deg, rgba(173,252,234,1) 26.8%, rgba(192,
     display: flex;
     border-radius: 10px;
     word-break: break-word;
+    background-color:#FFFFFF;
 `;
 
 const Text = styled(Typography)`
@@ -46,7 +48,7 @@ const Time = styled(Typography)`
 `;
 
 const Message = ({ message }) => {
-    const { account } = useContext(AccountContext);
+    const { account,theme } = useContext(AccountContext);
 
     return (
         <>
@@ -59,9 +61,9 @@ const Message = ({ message }) => {
 
                     </Own>
                     :
-                    <Wrapper>
+                    <Wrapper className='dusra' id={theme}>
                          {
-                            message.type==='file'? <ImageMessage message={message}/> : <TextMessage message={message}/>
+                            message.type==='file'? <ImageMessage message={message}/> : <TextMessage  message={message}/>
                         }
                      </Wrapper>
             }
@@ -75,7 +77,7 @@ const TextMessage = ({ message }) => {
 
     return (
         <>
-            <Text>{message.text}</Text>
+            <Text >{message.text}</Text>
             <Time>{formatDate(message.createdAt)}</Time>
         </>
     )

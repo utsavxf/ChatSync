@@ -1,5 +1,8 @@
 import { Box, InputBase, styled } from '@mui/material';
 import { Search as SearchIcon } from '@mui/icons-material';
+import { useContext } from 'react';
+import { AccountContext } from '../../../context/AccountProvider';
+import "./Total.css"
 
 const Component = styled(Box)`
     background: #fff;
@@ -34,11 +37,11 @@ const InputField = styled(InputBase) `
 `;
 
 const Search = ({setText}) => {
-
-
+   
+    const {theme,setTheme}=useContext(AccountContext)
 
     return (
-        <Component>
+        <Component className='top' id={theme}>
             <Wrapper>
                 <Icon>
                     <SearchIcon fontSize="small"/>
